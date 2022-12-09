@@ -1,12 +1,11 @@
+package it.aleemont.sierpinski.api;
+
 public interface Point2D {
-    private float x;
-    private float y;
+    public double getX();
+    public double getY();
 
-    public float getX();
-    public float getY();
-
-    public void setX(float x);
-    public void setY(float y);
+    public void setX(double x);
+    public void setY(double y);
 
     public double getDistance(Point2D p);
     public double getDistanceSquared(Point2D p);
