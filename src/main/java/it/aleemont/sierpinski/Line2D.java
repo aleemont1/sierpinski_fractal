@@ -15,5 +15,17 @@ public class Line2D {
         return this.p_start.getDistance(p_end);
     }
 
-    
+    public Point2D getP_start() {
+        return this.p_start;
+    }
+
+    public Point2D getP_end() {
+        return this.p_end;
+    }
+
+    public String toString() {
+        return "p_start: [" + p_start + "] p_end: [" + p_end + "]";
+    }
+
+
 }

@@ -1,6 +1,4 @@
 package it.aleemont.sierpinski;
-import it.aleemont.Line2D;
-
 public class Sierpinski {
 
     private static double height(double length) {
@@ -25,7 +23,7 @@ public class Sierpinski {
     // triangle has bottom vertex (x, y) and sides of the specified length. 
     //
 
-    
+    private static double min_
 
     // Takes an integer command-line argument n; 
     // draws the outline of an equilateral triangle (pointed upwards) of length 1; 
@@ -33,21 +31,21 @@ public class Sierpinski {
     // draws a Sierpinski triangle of order n that fits snugly inside the outline. 
     public static void main(String[] args) {
 
-        int length = 1;
-
+        final double LEN = 1.0;
+        final Point2D ORIGIN = new Point2D(0.0,0.0);
+        final Point2D END = new Point2D(LEN, 0.0);
         /* base triangle points coordinates */
-        
+        //Line2D l = new Line2D(ORIGIN, new Point2D());
 
-        int n = Integer.parseInt(args[0]);
-        double t = Math.sqrt(3.0) / 2.0;
-        StdDraw.line(x0, y0, x1, y0);
-        StdDraw.line(x1, y1, x1/2, y1);
-        StdDraw.line(x1/2, y1, x0, y0);
+        final double HEIGHT = height(LEN);
+        //line2D l1 = new line2D(ORIGIN, END);
+        //int n = Integer.parseInt(args[0]);
+        //double t = Math.sqrt(3.0) / 2.0;
+        StdDraw.line(ORIGIN.getX(), ORIGIN.getY(), END.getX(), END.getY());
+        StdDraw.line(ORIGIN.getX(), ORIGIN.getY(), LEN/2, HEIGHT);
+        StdDraw.line(END.getX(), END.getY(), LEN/2, HEIGHT);
         
-        double x = 0.5;
-        double y = 0;
-
-        filledTriangle(x, y, length);
+        
 
     }
 }
