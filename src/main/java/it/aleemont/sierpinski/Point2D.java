@@ -41,6 +41,11 @@ public class Point2D {
         return Math.sqrt(squared_d);
     }
 
+    public Point2D mediumPoint(Point2D p) {
+        double x_sum = p.getX() + this.getX();
+        double y_sum = p.getY() + this.getY();
+        return new Point2D(x_sum/2, y_sum/2);
+    }
     public String toString() {
         return "x: " + this.getX() + " y: " + this.getY();
     }
